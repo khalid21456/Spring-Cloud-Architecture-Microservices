@@ -8,10 +8,10 @@
 		<version>3.5.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ecom</groupId>
-	<artifactId>customer-service</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>inventory-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>customer-service</name>
+	<name>inventory-service</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -64,7 +64,6 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.32</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -95,7 +94,6 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-							<version>1.18.32</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>

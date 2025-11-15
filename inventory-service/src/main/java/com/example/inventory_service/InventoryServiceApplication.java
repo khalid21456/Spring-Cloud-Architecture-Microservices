@@ -15,7 +15,7 @@ public class InventoryServiceApplication {
 	}
 
 
-	@Bean
+	//@Bean
 	CommandLineRunner start(ProductRepository productRepository) {
 		return args -> {
 			productRepository.save(Product.builder()

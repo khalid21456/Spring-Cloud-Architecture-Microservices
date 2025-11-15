@@ -1,0 +1,13 @@
+package com.example.billing_service.models;
+
+import lombok.*;
+
+import java.util.UUID;
+
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+public class Product {
+    private UUID uuid;
+    private String name;
+    private int quantity;
+    private double price;
+}

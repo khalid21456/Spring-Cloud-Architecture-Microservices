@@ -15,7 +15,7 @@ public class CustomerServiceApplication {
 	}
 
 
-	@Bean
+	//@Bean
 	CommandLineRunner start(CustomerRepository customerRepository) {
 		return args -> {
 			customerRepository.save(Customer.builder()

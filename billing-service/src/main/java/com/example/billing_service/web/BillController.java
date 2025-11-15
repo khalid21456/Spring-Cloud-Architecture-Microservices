@@ -5,6 +5,7 @@ import com.example.billing_service.entities.Bill;
 import com.example.billing_service.feign.CustomerServiceRestClient;
 import com.example.billing_service.feign.InventoryServiceRestClient;
 import com.example.billing_service.models.Customer;
+import com.example.billing_service.models.Product;
 import com.example.billing_service.repository.BillRepository;
 import com.example.billing_service.repository.ProductItemRepository;
 import jakarta.ws.rs.Path;
@@ -38,6 +39,9 @@ public class BillController {
         Bill bill = billRepository.findById(id).get();
         Customer customer = customerServiceRestClient.findCustomerById(bill.getCustomerId());
         bill.setCustomer(customer);
+        bill.getProductItems().forEach(productItem -> {
+            productItem.setProduct(inventoryServiceRestClient.getProduct(productItem.getProductId()));
+        });
         return bill;
     }
 }
